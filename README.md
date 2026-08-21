@@ -1,29 +1,29 @@
-# 🛠️ Predictive Maintenance System
+#  Predictive Maintenance System
 A backend system that ingests machine sensor readings (runtime hours,
 temperature, vibration, pressure) and predicts **failure risk before a
-breakdown happens** — the core pattern behind industrial IoT + Machine
+breakdown happens**  the core pattern behind industrial IoT + Machine
 Learning maintenance platforms used in manufacturing, energy, and
 logistics.
 
 ---
 
-## 📌 Key Features
+## Key Features
 
-- 🔧 Register and manage machines with reading history
-- 📊 Log real-time sensor data (runtime, temperature, vibration, pressure)
-- 🤖 ML-based failure risk prediction using a **Random Forest classifier**
-- 🧠 Graceful **rule-based fallback** when there isn't enough labeled
+-  Register and manage machines with reading history
+-  Log real-time sensor data (runtime, temperature, vibration, pressure)
+-  ML-based failure risk prediction using a **Random Forest classifier**
+-  Graceful **rule-based fallback** when there isn't enough labeled
   failure data yet — the API always returns a usable risk score
-- 🚨 Automatic maintenance alert generation with `low / medium / high`
+-  Automatic maintenance alert generation with `low / medium / high`
   risk levels
-- 💾 Works out-of-the-box with **SQLite** (zero setup) or scales to
+-  Works out-of-the-box with **SQLite** (zero setup) or scales to
   **MySQL** for production
-- 🧪 Includes a sample-data generator to simulate machines wearing
+-  Includes a sample-data generator to simulate machines wearing
   toward failure vs. staying healthy — runnable end-to-end in minutes
 
 ---
 
-## 🏗️ Architecture
+##  Architecture
 
 ```
 ┌─────────────┐      ┌──────────────┐      ┌─────────────────┐
@@ -48,7 +48,7 @@ logistics.
 
 ---
 
-## 🧰 Tech Stack
+##  Tech Stack
 
 | Category | Tools |
 |---|---|
@@ -59,7 +59,7 @@ logistics.
 
 ---
 
-## ⚙️ Setup & Installation
+##  Setup & Installation
 
 ```bash
 pip install -r requirements.txt
@@ -78,7 +78,7 @@ Server runs at `http://localhost:5004`.
 
 ---
 
-## 🚀 Try It End-to-End
+## Try It End-to-End
 
 ```bash
 python sample_data/generate_sample_data.py
@@ -97,7 +97,7 @@ Conveyor Motor C     -> risk=62.67% level=medium (source: ml_model)
 
 ---
 
-## 📡 API Reference
+## API Reference
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
@@ -123,7 +123,7 @@ curl -X POST http://localhost:5004/api/predict/1
 
 ---
 
-## 🧠 How the Model Works
+## How the Model Works
 
 1. Each historical sensor reading is labeled `failed` (0/1) — whether
    a failure occurred at/around that reading.
@@ -144,7 +144,7 @@ curl -X POST http://localhost:5004/api/predict/1
 
 ---
 
-## 🔭 Possible Extensions
+## Possible Extensions
 
 - Time-series features (rate of change in vibration/temperature, not
   just current snapshot values)
@@ -155,7 +155,7 @@ curl -X POST http://localhost:5004/api/predict/1
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 predictive-maintenance-system/
@@ -169,6 +169,6 @@ predictive-maintenance-system/
 │   └── generate_sample_data.py
 └── README.md
 
-## 📄 License
+##  License
 
 This project was developed for academic purposes. Feel free to explore the code; please credit the original authors if reused.
