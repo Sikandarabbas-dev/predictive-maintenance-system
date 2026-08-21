@@ -171,4 +171,4 @@ predictive-maintenance-system/
 
 ## 📄 License
 
-This project is acadm.
+This project was developed for academic purposes. Feel free to explore the code; please credit the original authors if reused.
